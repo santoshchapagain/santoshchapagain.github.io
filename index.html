@@ -53,10 +53,6 @@
 </head>
 <body>
   <div class="hero">
-    <section style="max-width: 700px; margin: 3rem auto; padding: 1rem;">
-      <h2 style="text-align: center;">My Skills</h2>
-      <canvas id="skillsChart" width="400" height="300"></canvas>
-    </section>
     <img src="profile.png" alt="Santosh Chapagain" style="width:150px;height:150px;border-radius:50%;margin-bottom:1rem;">
     <h1>Hi, I'm Santosh Chapagain</h1>
     <p class="lead">Tech Enthusiast | Data Engineer | Problem Solver</p>
@@ -89,12 +85,19 @@
       </div>
     </div>
 
-    <h2 class="section-title">Skills</h2>
-    <ul>
-      <li>Languages: Python, SQL, JavaScript</li>
-      <li>Tools: Spark, Power BI, Git, Docker</li>
-      <li>Cloud: Azure, AWS (basic)</li>
-    </ul>
+   <h2 class="section-title">Skills</h2>
+   <div class="row">
+     <div class="col-md-6">
+       <ul>
+         <li>Languages: Python, SQL, JavaScript</li>
+         <li>Tools: Spark, Power BI, Git, Docker</li>
+         <li>Cloud: Azure, AWS (basic)</li>
+       </ul>
+     </div>
+     <div class="col-md-6">
+       <canvas id="skillsChart" width="400" height="300"></canvas>
+     </div>
+   </div>
 
     <h2 class="section-title">Contact</h2>
     <p>Email: <a href="mailto:santosh@example.com">santosh@example.com</a></p>
