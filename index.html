@@ -49,9 +49,14 @@
 	  border: 1px solid #555;
 	}
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="hero">
+    <section style="max-width: 700px; margin: 3rem auto; padding: 1rem;">
+      <h2 style="text-align: center;">My Skills</h2>
+      <canvas id="skillsChart" width="400" height="300"></canvas>
+    </section>
     <img src="profile.png" alt="Santosh Chapagain" style="width:150px;height:150px;border-radius:50%;margin-bottom:1rem;">
     <h1>Hi, I'm Santosh Chapagain</h1>
     <p class="lead">Tech Enthusiast | Data Engineer | Problem Solver</p>
@@ -139,6 +144,36 @@
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
   </script>
-
+  <script>
+    const ctx = document.getElementById('skillsChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Python', 'SQL', 'Power BI', 'Spark', 'ETL', 'Git', 'JavaScript'],
+        datasets: [{
+          label: 'Proficiency (%)',
+          data: [85, 90, 60, 75, 80, 80, 50],
+          backgroundColor: 'rgba(30, 144, 255, 0.6)',
+          borderColor: 'rgba(30, 144, 255, 1)',
+          borderWidth: 1,
+          borderRadius: 6,
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        scales: {
+          x: {
+            beginAtZero: true,
+            max: 100,
+          }
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: { enabled: true }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
