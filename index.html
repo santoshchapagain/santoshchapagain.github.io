@@ -50,12 +50,13 @@
 	}
   </style>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
   <div class="hero">
     <img src="profile.png" alt="Santosh Chapagain" style="width:150px;height:150px;border-radius:50%;margin-bottom:1rem;">
     <h1>Hi, I'm Santosh Chapagain</h1>
-    <p class="lead">Tech Enthusiast | Data Engineer | Problem Solver</p>
+    <p class="lead"><span id="typed"></span></p>
   </div>
 
 
@@ -197,6 +198,15 @@
     }, { threshold: 0.3 });
   
     observer.observe(document.getElementById('skillsChart'));
+  </script>
+  <script>
+    new Typed('#typed', {
+      strings: ['Tech Enthusiast', 'Data Engineer', 'Problem Solver'],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 2000,
+      loop: true
+    });
   </script>
 </body>
 </html>
