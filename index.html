@@ -13,11 +13,11 @@
       color: #343a40;
     }
     .hero {
-      background: linear-gradient(135deg, #007bff, #6610f2);
-      color: white;
-      padding: 4rem 1rem;
-      text-align: center;
-    }
+	background: linear-gradient(135deg, #1a1a1a, #2e2e2e); /* Darker gray gradient */
+	color: white;
+	padding: 4rem 1rem;
+	text-align: center;
+	}
     .section-title {
       margin-top: 3rem;
       margin-bottom: 1rem;
@@ -106,8 +106,8 @@
     <p>LinkedIn: <a href="https://www.linkedin.com/in/santoshchapagain" target="_blank">Santosh Chapagain</a></p>
 	
 	<h2 class="section-title">Resume</h2>
-	<a href="resume.pdf" class="btn btn-primary" download target="_blank">
-	  📄 Download My Resume
+	<a href="resume.pdf" class="btn btn-primary" download target="_blank" style="background-color: rgba(46, 46, 46, 0.9); border-color: rgba(46, 46, 46, 1); color: white;">
+	📄 Download My Resume
 	</a>
 
   </div>
@@ -154,37 +154,33 @@
     function renderSkillsChart() {
       const ctx = document.getElementById('skillsChart').getContext('2d');
       new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['Python', 'SQL', 'Power BI', 'Spark', 'ETL', 'Git', 'JavaScript'],
-          datasets: [{
-            label: 'Proficiency (%)',
-            data: [85, 90, 60, 75, 80, 80, 50],
-            backgroundColor: 'rgba(30, 144, 255, 0.6)',
-            borderColor: 'rgba(30, 144, 255, 1)',
-            borderWidth: 1,
-            borderRadius: 6,
-          }]
-        },
-        options: {
-          indexAxis: 'y',
-          responsive: true,
-          animation: {
-            duration: 1000,
-            easing: 'easeOutBounce'
-          },
-          scales: {
-            x: {
-              beginAtZero: true,
-              max: 100,
-            }
-          },
-          plugins: {
-            legend: { display: false },
-            tooltip: { enabled: true }
-          }
-        }
-      });
+		type: 'bar',
+		data: {
+			labels: ['Python', 'SQL', 'Power BI', 'Spark', 'ETL', 'Git', 'JavaScript'],
+			datasets: [{
+			label: 'Proficiency (%)',
+			data: [85, 90, 60, 75, 80, 80, 50],
+			backgroundColor: 'rgba(46, 46, 46, 0.7)',  // Darker shade to match hero background
+			borderColor: 'rgba(46, 46, 46, 1)',      // Darker border
+			borderWidth: 1,
+			borderRadius: 6,
+			}]
+		},
+		options: {
+			indexAxis: 'y',
+			responsive: true,
+			scales: {
+			x: {
+				beginAtZero: true,
+				max: 100,
+			}
+			},
+			plugins: {
+			legend: { display: false },
+			tooltip: { enabled: true }
+			}
+		}
+		});
     }
   
     // Intersection Observer
