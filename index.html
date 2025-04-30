@@ -163,19 +163,26 @@
         }]
       },
       options: {
-        indexAxis: 'y',
-        responsive: true,
-        scales: {
-          x: {
-            beginAtZero: true,
-            max: 100,
+      indexAxis: 'y',
+      responsive: true,
+      animation: {
+        duration: 1200,
+        easing: 'easeOutBounce'
+      },
+      scales: {
+        x: {
+          beginAtZero: true,
+          max: 100,
+          ticks: {
+            stepSize: 20
           }
-        },
-        plugins: {
-          legend: { display: false },
-          tooltip: { enabled: true }
         }
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: { enabled: true }
       }
+    }
     });
   </script>
 </body>
